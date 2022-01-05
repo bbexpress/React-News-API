@@ -18,13 +18,11 @@ function Posts() {
     });
 
     useEffect(()=>{
-        console.log('dispatch');
         dispatch(fetchPosts());
     },[dispatch]);
 
     const renderPosts = () => {
         if(value.loading){
-            console.log(value);
             return<h1>Loading...</h1>
         }else{
             return value.items.articles.map((el, index) => {

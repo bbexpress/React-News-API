@@ -11,7 +11,6 @@ export const fetchPosts = () => async(dispatch,getState) => {
         'sortBy=popularity&' +
         'apiKey=54b167ab970142b488123d59fe062475');
         dispatch ({type: "FETCH_POSTS_SUCCESS",payload: response.data});
-        console.log(response.data);
     }
     catch(error){
         dispatch({type: "FETCH_POSTS_FAILURE", error});
